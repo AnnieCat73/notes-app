@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*noteslist*/
+
+.note-delete {
+  /*position: absolute;
+  top: 11px;
+  right: 10px;*/
+  font-size: 18px;
+  color: lightgrey;
+  padding: 5px;
+  background: transparent;
+  border: 0;
+}
+
+.note-delete:hover {
+  color: black;
+  cursor: pointer;
+}
+
+
+.note p {
+  font-size: 1.1em;
+  font-size: 16px;
+  font-weight: bold;
+  padding: .8em;
+  color: rgb(121, 118, 118);
+}
