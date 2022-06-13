@@ -12,12 +12,41 @@ code {
     monospace;
 }
 
+.container {
+  width: 100%;
+  padding: 0em;
+  min-height: 100vh;
+}
+
 /*noteslist*/
 
+.notes-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 0 3em;
+}
+
+.note {
+  font-family: "Permanent Marker", cursive;
+  /*width: 200px;*/
+  min-height: 200px;
+
+  /*margin-left: 40px;*/
+  background-color: lightyellow;
+  /*border: 1px solid grey;*/
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  border-radius: 5px;
+  /*display: flex;
+  flex-direction: column;*/
+  position: relative;
+  padding: 1.2em 1em;
+}
+
 .note-delete {
-  /*position: absolute;
+  position: absolute;
   top: 11px;
-  right: 10px;*/
+  right: 10px;
   font-size: 18px;
   color: lightgrey;
   padding: 5px;
@@ -38,3 +67,219 @@ code {
   padding: .8em;
   color: rgb(121, 118, 118);
 }
+
+
+/*add-note*/
+
+.note.new {
+  background-color: #64f3a5;
+  padding: 0;
+}
+
+textarea {
+  background-color: #64f3a5;
+  resize: none;
+  padding: 1em 0 1em 1em;
+
+}
+
+textarea:focus {
+  outline: none;
+}
+
+
+.add-btn {
+  border-radius: 5px;
+  border-top-color: #ccc;
+  border-bottom-color: #ccc;
+  border-left-color: #ccc;
+  border-right-color: #ccc;
+  cursor: pointer;
+  padding: 8px;
+  font-weight: bold;
+  background-color: #fff;
+  outline: none;
+}
+
+
+.add-btn:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+
+/***************
+
+.container .search-container,
+.container .app-control,
+.container .note-list-container {
+  padding: 0 3em;
+}
+
+.notes-list {
+  display: grid;
+  padding: 1em 3em 0 3em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+
+
+}
+
+
+
+
+
+textarea {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2em;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+/******************my previous styles*
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #eee;
+  padding: 0px;
+  overflow: hidden;
+}
+
+header {
+  background-color: #f5ba13;
+
+  padding: 16px 0px 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+
+
+/*Search*
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+.search {
+  background-color: rgb(233, 233, 233);
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 8px;
+  flex-grow: 1;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.toggle {
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+.toggle:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+/*Dark mode*
+
+.dark-mode {
+  background-color: #333;
+}
+
+.dark-mode h1 {
+  color: white;
+}
+
+
+
+/*Yellow notes being created*
+.note {
+  font-family: "Permanent Marker", cursive;
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+  /*margin-left: 40px;*
+  background-color: lightyellow;
+  /*border: 1px solid grey;*
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1.2em 1em;
+
+}
+
+
+
+
+
+
+
+
+
+
+.note p {
+  font-size: 1.1em;
+  font-size: 16px;
+  font-weight: bold;
+  padding: .8em;
+  color: rgb(121, 118, 118);
+}
+
+/*.note h1 {
+  margin-bottom: 6px;
+  border-bottom: 2px solid;
+}*
+
+.note p {
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/*Footer*
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #ccc;
+}
+
+**********************/

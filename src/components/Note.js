@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Note() {
+function Note({ id, text }) {
   return (
     <div className="note">
-      <span>Text</span>
+      <span>{text}</span>
       <button className="note-delete">X</button>
     </div>
   )
