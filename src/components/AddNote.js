@@ -7,7 +7,11 @@ function AddNote({ handleAddNote }) {
     setNoteText(e.target.value);
   };
   const handleAddClick = () => {
-    handleAddNote(noteText);//pass text typed when click to add
+    if (noteText.trim().length > 0) {
+      handleAddNote(noteText);//if there is a value this gets added to state
+      setNoteText('');//and the input should reset
+    }
+
   }
   return (
     <div className="app-control">

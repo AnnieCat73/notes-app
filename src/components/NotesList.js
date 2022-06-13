@@ -2,7 +2,7 @@ import React from 'react'
 import Note from './Note'
 import AddNote from './AddNote'
 
-function NotesList({ notes, handleAddNote }) {//here get notes array from app
+function NotesList({ notes, handleAddNote, handleDeleteNote }) {//here get notes array from app
   return (
     <div className="notes-list">
       <AddNote handleAddNote={handleAddNote} />
@@ -10,6 +10,7 @@ function NotesList({ notes, handleAddNote }) {//here get notes array from app
         <Note
           id={note.id}
           text={note.text}
+          handleDeleteNote={handleDeleteNote}
         />)}
 
 

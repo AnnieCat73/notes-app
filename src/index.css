@@ -39,6 +39,8 @@ code {
   border-radius: 5px;
   /*display: flex;
   flex-direction: column;*/
+  white-space: pre-wrap;
+  /*to keep line break if any in a note*/
   position: relative;
   padding: 1.2em 1em;
 }
