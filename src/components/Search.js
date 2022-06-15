@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Search({ handleSearchNote }) {
+function Search({ handleSearchNote, handleToggleDarkMode }) {
   return (
     <div className="search-container">
       <input
@@ -9,7 +9,11 @@ function Search({ handleSearchNote }) {
         placeholder='Type here to search...'
         className="search"
       />
-      <button className="toggle">Toggle Mode</button>
+      <button
+        className="toggle"
+        onClick={() => handleToggleDarkMode((previousDarkMode) => !previousDarkMode)}
+      >
+        Toggle Mode</button>
     </div>
   )
 }

@@ -36,6 +36,7 @@ header h1 {
 /*Search*/
 
 .search-container {
+  padding: 0 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -69,30 +70,34 @@ header h1 {
   cursor: pointer;
 }
 
+/*Dark mode*/
+
+.dark-mode {
+  background-color: #333;
+}
+
+.dark-mode h1 {
+  color: white;
+}
+
+
 
 /*noteslist*/
 
 .notes-list {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   padding: 0 3em;
 }
 
 .note {
   font-family: "Permanent Marker", cursive;
-  /*width: 200px;*/
   min-height: 200px;
-
-  /*margin-left: 40px;*/
   background-color: lightyellow;
-  /*border: 1px solid grey;*/
   box-shadow: 0 1px 5px rgb(138, 137, 137);
   border-radius: 5px;
-  /*display: flex;
-  flex-direction: column;*/
   white-space: pre-wrap;
-  /*to keep line break if any in a note*/
   position: relative;
   padding: 1.2em 1em;
 }
@@ -128,13 +133,14 @@ header h1 {
 .note.new {
   background-color: #64f3a5;
   padding: 0;
+  margin-top: 1em;
 }
 
 textarea {
   background-color: #64f3a5;
   resize: none;
   padding: 1em 0 1em 1em;
-
+  border: none;
 }
 
 textarea:focus {
@@ -188,7 +194,7 @@ footer p {
 .notes-list {
   display: grid;
   padding: 1em 3em 0 3em;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  
 
 
 }
@@ -231,15 +237,6 @@ body {
 
 
 
-/*Dark mode*
-
-.dark-mode {
-  background-color: #333;
-}
-
-.dark-mode h1 {
-  color: white;
-}
 
 
 
